@@ -1,0 +1,101 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "丰满的包子铺";
+}
+
+<link href='~/Content/base.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/Content/animate.min.css">
+<link rel="stylesheet" href="/Content/bootstrap.min.css">
+<link rel="stylesheet" href="/Content/font-awesome.min.css">
+<link rel="stylesheet" href="/Content/templatemo-style.css">
+<body>
+    <div class="container-fluid">
+        <div id="con" class="row-fluid">
+            <div class="span12">
+                <table class="table table-bordered" style="text-align:center">
+                    <tbody>
+                        <tr>
+                            <td>
+                                99669999996669999996699666699666999966699666699
+                            </td>
+                        </tr>
+                        <tr class="success">
+                            <td>
+                                99699999999699999999699666699669966996699666699
+                            </td>
+                        </tr>
+                        <tr class="error">
+                            <td>
+                                99669999999999999996699666699699666699699666699
+                            </td>
+                        </tr>
+                        <tr class="warning">
+                            <td>
+                                99666699999999999966666999966699666699699666699
+                            </td>
+                        </tr>
+                        <tr class="info">
+                            <td>
+                                99666666999999996666666699666699666699699666699
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                99666666669999666666666699666669966996699666699
+                            </td>
+                        </tr>
+                        <tr class="success">
+                            <td>
+                                99666666666996666666666699666666999966669999996
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p id="textt" style="text-align:center">
+                    嗨北鼻，这个是要在电脑上玩的，按住Ctrl+f然后输入9有惊喜！
+                </p>
+                <!-- Button trigger modal -->
+                <button id="btn" class="smoothScroll templatemo-slider-btn btn btn-default" data-toggle="modal" data-target="#myModal">
+                    看看效果
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">效果图！</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="~/Content/jiazi/xiaoguo.png" />
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" style="color:black" data-dismiss="modal">赞包大爷！</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- start 页脚 -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="wow bounceIn">Copyright &copy; <span>Cay</span> 2015 </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end 页脚 -->
+    </div>
+
+    <script src="/Scripts/jquery.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>
+        $("#con").height($(window).height() - 190);
+        $("#btn").attr("style", "margin-left:" + ($(window).width() - 50) / 2 + "px;color:black").fadeTo(30000, 0.8);
+    </script>
+
+</body>

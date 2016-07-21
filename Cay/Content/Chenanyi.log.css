@@ -1,0 +1,95 @@
+﻿.Chenanyi {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    width: 220px;
+    padding: 0;
+    margin: 0 0 0 -110px;
+    z-index: 9999;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5em;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    @-webkit-animation-duration .15s;
+    @-moz-animation-duration .15s;
+    @-ms-animation-duration .15s;
+    @-o-animation-duration .15s;
+    @animation-duration .15s;
+    @-webkit-animation-fill-mode both;
+    @-moz-animation-fill-mode both;
+    @-ms-animation-fill-mode both;
+    @-o-animation-fill-mode both;
+    @animation-fill-mode both
+}
+
+    .Chenanyi .Chenanyi-inner {
+        padding: 10px 10px;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .Chenanyi p {
+        margin: 0 0 5px;
+    }
+
+        .Chenanyi p:last-of-type {
+            margin-bottom: 0;
+        }
+
+@-webkit-keyframes motifyFx {
+    0% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: scale(0.85);
+    }
+}
+
+@-moz-keyframes ChenanyiFx {
+    0% {
+        -moz-transform-origin: center center;
+        -moz-transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        -moz-transform-origin: center center;
+        -moz-transform: scale(0.85);
+    }
+}
+
+@keyframes ChenanyiFx {
+    0% {
+        -webkit-transform-origin: center center;
+        -moz-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform-origin: center center;
+        -moz-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-transform: scale(0.85);
+        -moz-transform: scale(0.85);
+        transform: scale(0.85);
+    }
+}
+
+.ChenanyiFx {
+    @-webkit-animation-name motifyFx;
+    @-moz-animation-name motifyFx;
+    @-ms-animation-name motifyFx;
+    @-o-animation-name motifyFx;
+    @animation-name motifyFx
+}

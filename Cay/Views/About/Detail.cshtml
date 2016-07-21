@@ -1,0 +1,96 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "丰满的包子铺";
+}
+
+<link href='~/Content/base.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/Content/animate.min.css">
+<link rel="stylesheet" href="/Content/bootstrap.min.css">
+<link rel="stylesheet" href="/Content/font-awesome.min.css">
+<link rel="stylesheet" href="/Content/templatemo-style.css">
+<link rel="stylesheet" href="~/Content/Chenanyi.log.css" />
+<script src="~/Scripts/Chenanyi.log.js"></script>
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+    <nav class="navbar navbar-fixed-top custom-navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">丰满的包子</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#alert" class="smoothScroll">提示弹层</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- start 页头 -->
+    <section id="home">
+        <div class="overlay">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li style="display:block">
+                        <img src="/Content/images/slider/2.jpg" alt="Slide 2">
+                        <div class="slider-caption">
+                            <div class="templatemo_homewrapper">
+                                <h2>提示弹层小插件</h2>
+                                <h1></h1>
+                                <p>By 包子</p>
+                                <h3></h3>
+                                <a href="javascript:log('哎哟，不错哟');" class="btn btn-default text-uppercase" >试一下</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- end 页头 -->
+    <section id="alert">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center wow bounceIn" style="margin-top:50px;height:250px">
+                    <h2>提示弹层</h2>
+                    <hr>
+                    <h4>作用：代替alert,较为美观</h4>
+                    <a href="javascript:log('哎哟，不错哟');" class="btn btn-default text-uppercase" style="margin-top:-20px;color:#DD7C7C;">试一下</a>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    引用
+                    <xmp style ="position: absolute;top: -13px;left: -150px;">
+                        <link rel="stylesheet" href="~/Content/Chenanyi.log.css" />
+                        <script src="~/Chenanyi.log.js"></script>
+                    </xmp>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    用法
+                    <p>log("message","5")=>提示message，5秒后消失</p>
+                    <p>or log("message")=>提示message，展示时间默认为3秒</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- start 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="wow bounceIn">Copyright &copy; <span>Cay</span> 2016 </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end 页脚 -->
+    <!-- end 页脚 -->
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery.flexslider.js"></script>
+    <script src="/Scripts/isotope.js"></script>
+    <script src="/Scripts/imagesloaded.min.js"></script>
+    <script src="/Scripts/smoothscroll.js"></script>
+    <script src="/Scripts/wow.min.js"></script>
+</body>

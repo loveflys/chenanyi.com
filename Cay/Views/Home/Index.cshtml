@@ -1,0 +1,221 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon">
+
+    <title>首页</title>
+
+    <!--公共样式-->
+    <link rel="stylesheet" type="text/css" href="~/Content/New/Index/css/reset.css" />
+
+    <!--公共脚本-->
+    <script type="text/javascript" src="/Scripts/New/Index/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/Scripts/New/Index/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/Scripts/New/Index/jquery.fullPage.min.js"></script>
+    <!--dialog-->
+    <!--artdiolag-->
+    <script type="text/javascript" src="/Scripts/New/Index/artDialog4_jb51net/jquery.artDialog.js"></script>
+    <script type="text/javascript" src="/Scripts/New/Index//artDialog4_jb51net/artDialog.iframe.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Scripts/New/Index//artDialog4_jb51net/skins/default.css" />
+
+    <!--前端脚本-->
+    <script type="text/javascript" src="/Scripts/New/Index/common.js"></script>
+
+
+</head>
+
+<body>
+    <!--导航-->
+    <div class="menu" id="menu">
+        <div class="container_1000 m_center cf">
+            <h1 class="logo">
+                <a href="#page1">
+                    <span>
+                        <i class="l_1"></i>
+                        <i class="l_2"></i>
+                        <i class="l_3"></i>
+                        <i class="l_4"></i>
+                    </span>
+                </a>
+            </h1>
+            <ul class="nav">
+                <li data-menuanchor="page1" class="active"><a href="#page1">简介</a></li>
+                <li data-menuanchor="page2"><a href="#page2">技能</a></li>
+                <li data-menuanchor="page3"><a href="#page3">案例作品</a></li>
+                <li data-menuanchor="page4"><a href="#page4">联系方式</a></li>
+                <li><a href="~/Content/download/陈安一 - 简历.doc">简历下载</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="js_fullpage">
+
+        <!--个人简介-->
+        <div class="section">
+            <div class="container container_1000 m_center align_center">
+                <p class="mb20">
+                    <span class="head">
+                        <span class="zz"></span>
+                        <span class="border"></span>
+                        <img src="~/Content/New/Index/images/head.png" width="169" height="169" />
+                    </span>
+                </p>
+                <p class="p_info mb20">
+                    <span class="p_name">陈安一</span>
+                    <br />
+                    <span class="p_zhiwei">研发工程师/前端工程师</span>
+                </p>
+                <p>
+                    <span class="zhishi zhishi_1"></span>
+                </p>
+                <p>
+                    <span class="zhishi zhishi_2"></span>
+                </p>
+                <p class="mb10">
+                    <span class="zhishi zhishi_3"></span>
+                </p>
+
+                <p class="mb30">
+                    <span class="title_1">工作经历</span>
+                </p>
+                <div class="wrap_time m_center cf">
+                    <span class="time_start"></span><span class="time_end"></span>
+                    <div class="jingli time_3">
+                        <p class="jingli_time">2014-05 — 至今<p>
+                        <p class="jingli_info">北京恩源科技有限公司 研发工程师/前端工程师</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--个人技能-->
+        <div class="section bg_fff m_center align_center">
+            <p class="mb30">
+                <span class="img_bg title_jn"></span>
+            </p>
+            <p>
+                <span class="zhishi zhishi_1"></span>
+            </p>
+            <p>
+                <span class="zhishi zhishi_2"></span>
+            </p>
+            <p class="mb20">
+                <span class="zhishi zhishi_3"></span>
+            </p>
+            <div class="list_icon">
+                <p class="icon_cell icon_cell_1">
+                    <span class="icon_ico img_bg"></span>
+                    <span class="icon_txt img_bg"></span>
+                </p>
+                <p class="icon_cell icon_cell_2">
+                    <span class="icon_ico img_bg"></span>
+                    <span class="icon_txt img_bg"></span>
+                </p>
+                <p class="icon_cell icon_cell_3">
+                    <span class="icon_ico img_bg"></span>
+                    <span class="icon_txt img_bg"></span>
+                </p>
+                <p class="icon_cell icon_cell_4">
+                    <span class="icon_ico img_bg"></span>
+                    <span class="icon_txt img_bg"></span>
+                </p>
+                <div class="txt_intro">
+                    <p>喜欢学习，喜欢钻研。最重要的一点：认！真！负！责！</p>
+                    <button class="yue_info" style="margin-top:0px" onclick="location.href='/about'">深入了解</button>
+                </div>
+            </div>
+        </div>
+
+        <!--案例-->
+        <div class="section m_center align_center">
+            <p class="mb30">
+                <span class="title_1">案例作品</span>
+            </p>
+            <p>
+                <span class="zhishi zhishi_1"></span>
+            </p>
+            <p>
+                <span class="zhishi zhishi_2"></span>
+            </p>
+            <p class="mb20">
+                <span class="zhishi zhishi_3"></span>
+            </p>
+            <div class="container container_1000 m_center cf">
+                <div class="container_case">
+                    <div class="container wrap_case cf" id="js_wrap_case">
+                        <ul class="list_case focus">
+                            <li data-url="http://m.yuan.cn/" data-name="源网触屏版" class="js_cell_case">
+                                <span class="zz"></span>
+                                <img src="~/Content/New/Index/images/eq/case1.png" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>源网触屏版</span>
+                                    <span>两人小组完成开发</span>
+                                </p>
+                            </li>
+                            <li data-url="http://me.yuan.cn/" data-name="源秘宣传站" class="js_cell_case">
+                                <span class="zz"></span>
+                                <img src="~/Content/New/Index/images/eq/case2.png" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>源秘APP宣传及分享站点</span>
+                                    <span>两人小组完成开发</span>
+                                </p>
+                            </li>
+                            <li data-url="http://yuan.cn/" data-name="源网PC版" class="js_cell_case">
+                                <span class="zz"></span>
+                                <img src="~/Content/New/Index/images/eq/case3.png" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>源网电脑端</span>
+                                    <span>参与开发</span>
+                                </p>
+                            </li>
+                            <li data-url="http://me.yuan.cn/" data-name="源秘APP" class="js_cell_case">
+                                <span class="zz"></span>
+                                <img src="~/Content/New/Index/images/eq/case4.png" width="248" height="160" />
+                                <p class="case_info">
+                                    <span>源秘APP</span>
+                                    <span>开发</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tips" id="js_tips">
+                    <span class="focus"></span>
+                </div>
+            </div>
+        </div>
+
+        <!--约-->
+        <div class="section align_center">
+            <p class="mb30">
+                <span class="img_bg2 title_jn title_yue"></span>
+            </p>
+            <p>
+                <span class="zhishi zhishi_1"></span>
+            </p>
+            <p>
+                <span class="zhishi zhishi_2"></span>
+            </p>
+            <p class="mb20">
+                <span class="zhishi zhishi_3"></span>
+            </p>
+            <p>
+                <span class="yue_info yue_1"><i>:18354189875</i></span>
+            </p>
+            <p>
+                <span class="yue_info yue_2"><i>:baozi@chenanyi.com</i></span>
+            </p>
+            <p>
+                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=5425219&site=qq&menu=yes" class="yue_info yue_3"><i>:5425219<span>（点击马上约）</span></i></a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+

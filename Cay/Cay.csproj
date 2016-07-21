@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A4B08DD8-E93F-4988-9E28-D251B4CA9E7F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cay</RootNamespace>
+    <AssemblyName>Cay</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JiaziController.cs" />
+    <Compile Include="Controllers\MoBanController.cs" />
+    <Compile Include="Controllers\NBController.cs" />
+    <Compile Include="Controllers\PhotoController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\DBHelper.cs" />
+    <Compile Include="Models\Photo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\0.jpg" />
+    <Content Include="Content\71a52fd8509d485bab9c3c6bb996eb4b.png" />
+    <Content Include="Content\animate.min.css" />
+    <Content Include="Content\base.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Chenanyi.log.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\images\back.jpg" />
+    <Content Include="Content\images\bg_notepad.jpg" />
+    <Content Include="Content\images\brickwall.png" />
+    <Content Include="Content\New\Index\css\reset.css" />
+    <Content Include="Content\New\Index\images\bg_jn.jpg" />
+    <Content Include="Content\New\Index\images\bg_jn.png" />
+    <Content Include="Content\New\Index\images\bg_yue.png" />
+    <Content Include="Content\New\Index\images\bg_zz.png" />
+    <Content Include="Content\New\Index\images\eq\case.jpg" />
+    <Content Include="Content\New\Index\images\eq\case1.png" />
+    <Content Include="Content\New\Index\images\eq\case2.png" />
+    <Content Include="Content\New\Index\images\eq\case3.png" />
+    <Content Include="Content\New\Index\images\eq\case4.png" />
+    <Content Include="Content\New\Index\images\eq\case_img.jpg" />
+    <Content Include="Content\New\Index\images\head.png" />
+    <Content Include="Content\New\Index\images\logo\logo.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Photo\214f0b6124644099c308386843a6aa45_b.jpg" />
+    <Content Include="Photo\2ce90ce76fb1c5cc475be968088e78d7_b.jpg" />
+    <Content Include="Photo\706bfcdf52826ee2df15adbbfca0fb42_b.jpg" />
+    <Content Include="Photo\a948aeae9a644a52dc11eaf46c656fe9_b.jpg" />
+    <Content Include="Photo\cay1.JPG" />
+    <Content Include="Photo\cay2.JPG" />
+    <Content Include="Photo\cay3.JPG" />
+    <Content Include="Content\images\cay4.png" />
+    <Content Include="Content\images\divider-bg.jpg" />
+    <Content Include="Content\images\ico_about.png" />
+    <Content Include="Content\images\ico_email.png" />
+    <Content Include="Content\images\ico_testimonials.png" />
+    <Content Include="Content\images\ico_work.png" />
+    <Content Include="Content\images\img.png" />
+    <Content Include="Photo\IMG1.JPG" />
+    <Content Include="Photo\IMG2.JPG" />
+    <Content Include="Photo\IMG3.JPG" />
+    <Content Include="Photo\IMG4.JPG" />
+    <Content Include="Photo\IMG5.JPG" />
+    <Content Include="Content\images\IMG6.JPG" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Photo\NEW1.JPG" />
+    <Content Include="Photo\NEW2.JPG" />
+    <Content Include="Photo\NEW3.JPG" />
+    <Content Include="Content\images\portfolio-img-1.jpg" />
+    <Content Include="Content\images\portfolio-img-2.jpg" />
+    <Content Include="Content\images\portfolio-img-3.jpg" />
+    <Content Include="Content\images\portfolio-img-4.jpg" />
+    <Content Include="Content\images\portfolio-img-5.jpg" />
+    <Content Include="Content\images\portfolio-img-6.jpg" />
+    <Content Include="Content\images\slider\1.jpg" />
+    <Content Include="Content\images\slider\2.jpg" />
+    <Content Include="Content\images\team-img-1.png" />
+    <Content Include="Content\images\team-img-2.png" />
+    <Content Include="Content\images\team-img-3.png" />
+    <Content Include="Content\img\0.jpg" />
+    <Content Include="Content\img\200.png" />
+    <Content Include="Content\img\bar-rank1.png" />
+    <Content Include="Content\img\bar-rank2.png" />
+    <Content Include="Content\img\bar-rank3.png" />
+    <Content Include="Content\img\img.png" />
+    <Content Include="Content\img\loading.png" />
+    <Content Include="Content\img\loadsuccess.png" />
+    <Content Include="Content\img\look.png" />
+    <Content Include="Content\img\member.png" />
+    <Content Include="Content\img\message.png" />
+    <Content Include="Content\img\reload.png" />
+    <Content Include="Content\img\send.png" />
+    <Content Include="Content\img\sub-mask-icon.png" />
+    <Content Include="Content\img\support-barindex-txt.png" />
+    <Content Include="Content\img\talk.png" />
+    <Content Include="Content\img\top-refresh.png" />
+    <Content Include="Content\Index2.css" />
+    <Content Include="Content\jiazi\xiaoguo.png" />
+    <Content Include="Content\jquery.pagepiling.css" />
+    <Content Include="Content\MB1\backgroundsize.min.htc" />
+    <Content Include="Content\MB1\base.css" />
+    <Content Include="Content\MB1\base2.css" />
+    <Content Include="Content\MB1\font\fontawesome-webfont.svg" />
+    <Content Include="Content\MB1\ie8.css" />
+    <Content Include="Content\MB1\images\arrow.svg" />
+    <Content Include="Content\MB1\images\header.jpg" />
+    <Content Include="Content\MB1\images\pic01.jpg" />
+    <Content Include="Content\MB1\images\pic02.jpg" />
+    <Content Include="Content\MB1\images\pic03.jpg" />
+    <Content Include="Content\MB1\images\pic04.jpg" />
+    <Content Include="Content\MB1\images\pic05.jpg" />
+    <Content Include="Content\MB1\images\pic06.jpg" />
+    <Content Include="Content\MB1\images\pic07.jpg" />
+    <Content Include="Content\MB1\images\pic08.jpg" />
+    <Content Include="Content\MB1\images\pic09.jpg" />
+    <Content Include="Content\MB1\images\pic10.jpg" />
+    <Content Include="Content\MB1\images\pic11.jpg" />
+    <Content Include="Content\MB1\images\pic12.jpg" />
+    <Content Include="Content\MB1\images\pic13.jpg" />
+    <Content Include="Content\MB1\images\pic14.jpg" />
+    <Content Include="Content\MB1\images\pic15.jpg" />
+    <Content Include="Content\MB1\images\toggle.svg" />
+    <Content Include="Content\MB1\PIE.htc" />
+    <Content Include="Content\MB1\skel-noscript.css" />
+    <Content Include="Content\MB1\style-mobile.css" />
+    <Content Include="Content\MB1\style-narrow.css" />
+    <Content Include="Content\MB1\style-narrower.css" />
+    <Content Include="Content\MB1\style-normal.css" />
+    <Content Include="Content\MB1\style-noscript.css" />
+    <Content Include="Content\MB1\style-wide.css" />
+    <Content Include="Content\MB1\style.css" />
+    <Content Include="Content\music\Young.mp3" />
+    <Content Include="Content\NB-css\Index.css" />
+    <Content Include="Content\NB-css\nb-flower.css" />
+    <Content Include="Content\NB-css\nb01.css" />
+    <Content Include="Content\NB-css\nb03.css" />
+    <Content Include="Content\newindex.css" />
+    <Content Include="Content\images\shadows.png" />
+    <Content Include="Content\photo_style.css" />
+    <Content Include="Content\pubuliu\component.css" />
+    <Content Include="Content\pubuliu\demo.css" />
+    <Content Include="Content\pubuliu\normalize.css" />
+    <Content Include="Content\sweetalert.css" />
+    <Content Include="Content\swipebox.css" />
+    <Content Include="Content\templatemo-style.css" />
+    <Content Include="Content\top-refresh.png" />
+    <Content Include="Content\wap\css\framework.css" />
+    <Content Include="Content\wap\css\owl.carousel.css" />
+    <Content Include="Content\wap\css\owl.theme.css" />
+    <Content Include="Content\wap\css\style.css" />
+    <Content Include="Content\wap\css\swipebox.css" />
+    <Content Include="Content\wap\image\1.jpg" />
+    <Content Include="Content\wap\image\1s.jpg" />
+    <Content Include="Content\wap\image\1w.jpg" />
+    <Content Include="Content\wap\image\2.jpg" />
+    <Content Include="Content\wap\image\2s.jpg" />
+    <Content Include="Content\wap\image\2w.jpg" />
+    <Content Include="Content\wap\image\3.jpg" />
+    <Content Include="Content\wap\image\3s.jpg" />
+    <Content Include="Content\wap\image\3w.jpg" />
+    <Content Include="Content\wap\image\4.jpg" />
+    <Content Include="Content\wap\image\4s.jpg" />
+    <Content Include="Content\wap\image\4w.jpg" />
+    <Content Include="Content\wap\image\5.jpg" />
+    <Content Include="Content\wap\image\5s.jpg" />
+    <Content Include="Content\wap\image\5w.jpg" />
+    <Content Include="Content\wap\image\6.jpg" />
+    <Content Include="Content\wap\image\6s.jpg" />
+    <Content Include="Content\wap\image\6w.jpg" />
+    <Content Include="Content\wap\image\address_48.png" />
+    <Content Include="Content\wap\image\arr-right.png" />
+    <Content Include="Content\wap\image\arrow-down.png" />
+    <Content Include="Content\wap\image\arrow-left.png" />
+    <Content Include="Content\wap\image\arrow-right.png" />
+    <Content Include="Content\wap\image\arrow-up.png" />
+    <Content Include="Content\wap\image\back.png" />
+    <Content Include="Content\wap\image\bg.png" />
+    <Content Include="Content\wap\image\block_48.png" />
+    <Content Include="Content\wap\image\bookmark_48.png" />
+    <Content Include="Content\wap\image\briefcase_48.png" />
+    <Content Include="Content\wap\image\bubble_48.png" />
+    <Content Include="Content\wap\image\buy_48.png" />
+    <Content Include="Content\wap\image\calendar_48.png" />
+    <Content Include="Content\wap\image\checkbox1.png" />
+    <Content Include="Content\wap\image\checkbox1c.png" />
+    <Content Include="Content\wap\image\checkbox2.png" />
+    <Content Include="Content\wap\image\checkbox2c.png" />
+    <Content Include="Content\wap\image\checkbox3.png" />
+    <Content Include="Content\wap\image\checkbox3c.png" />
+    <Content Include="Content\wap\image\clipboard_48.png" />
+    <Content Include="Content\wap\image\clock_48.png" />
+    <Content Include="Content\wap\image\delete_48.png" />
+    <Content Include="Content\wap\image\diagram_48.png" />
+    <Content Include="Content\wap\image\document_48.png" />
+    <Content Include="Content\wap\image\down_48.png" />
+    <Content Include="Content\wap\image\droid%402x.png" />
+    <Content Include="Content\wap\image\flag_48.png" />
+    <Content Include="Content\wap\image\folder_48.png" />
+    <Content Include="Content\wap\image\gear_48.png" />
+    <Content Include="Content\wap\image\globe_48.png" />
+    <Content Include="Content\wap\image\head.png" />
+    <Content Include="Content\wap\image\heart_48.png" />
+    <Content Include="Content\wap\image\help_48.png" />
+    <Content Include="Content\wap\image\home_48.png" />
+    <Content Include="Content\wap\image\icon3.png" />
+    <Content Include="Content\wap\image\info_48.png" />
+    <Content Include="Content\wap\image\ipad%402x.png" />
+    <Content Include="Content\wap\image\iphone%402x.png" />
+    <Content Include="Content\wap\image\key_48.png" />
+    <Content Include="Content\wap\image\label_48.png" />
+    <Content Include="Content\wap\image\left_48.png" />
+    <Content Include="Content\wap\image\letter_48.png" />
+    <Content Include="Content\wap\image\loader.gif" />
+    <Content Include="Content\wap\image\Logo.png" />
+    <Content Include="Content\wap\image\minus.png" />
+    <Content Include="Content\wap\image\monitor_48.png" />
+    <Content Include="Content\wap\image\next.png" />
+    <Content Include="Content\wap\image\next1.png" />
+    <Content Include="Content\wap\image\pencil_48.png" />
+    <Content Include="Content\wap\image\plus.png" />
+    <Content Include="Content\wap\image\plus_48.png" />
+    <Content Include="Content\wap\image\present_48.png" />
+    <Content Include="Content\wap\image\prev.png" />
+    <Content Include="Content\wap\image\prev1.png" />
+    <Content Include="Content\wap\image\print_48.png" />
+    <Content Include="Content\wap\image\radio1.png" />
+    <Content Include="Content\wap\image\radio1c.png" />
+    <Content Include="Content\wap\image\radio2.png" />
+    <Content Include="Content\wap\image\radio2c.png" />
+    <Content Include="Content\wap\image\right_48.png" />
+    <Content Include="Content\wap\image\save_48.png" />
+    <Content Include="Content\wap\image\search_48.png" />
+    <Content Include="Content\wap\image\shield_48.png" />
+    <Content Include="Content\wap\image\splash-icon.png" />
+    <Content Include="Content\wap\image\splash-screen%402x.png" />
+    <Content Include="Content\wap\image\splash-screen%403x.png" />
+    <Content Include="Content\wap\image\splash-screen-ipad-landscape-retina.png" />
+    <Content Include="Content\wap\image\splash-screen-ipad-portrait-retina.png" />
+    <Content Include="Content\wap\image\splash-screen-ipad-portrait.png" />
+    <Content Include="Content\wap\image\splash-screen.png" />
+    <Content Include="Content\wap\image\statistics_48.png" />
+    <Content Include="Content\wap\image\status.gif" />
+    <Content Include="Content\wap\image\stop_48.png" />
+    <Content Include="Content\wap\image\tick_48.png" />
+    <Content Include="Content\wap\image\trash_48.png" />
+    <Content Include="Content\wap\image\up_48.png" />
+    <Content Include="Content\wap\image\user_48.png" />
+    <Content Include="Content\wap\image\wallet_48.png" />
+    <Content Include="Content\wap\image\warning_48.png" />
+    <Content Include="Content\wap\image\Welcome-wang.png" />
+    <Content Include="Content\wap\image\Welcome.png" />
+    <Content Include="Content\Yuan_SheQu_Cay.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\codropsicons.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\license.txt" />
+    <Content Include="game\css\main.css" />
+    <Content Include="game\image\background_1.png" />
+    <Content Include="game\image\baozi.gif" />
+    <Content Include="game\image\boom.png" />
+    <Content Include="game\image\bullet1.png" />
+    <Content Include="game\image\enemy1_fly_1.png" />
+    <Content Include="game\image\enemy2_fly_1.png" />
+    <Content Include="game\image\enemy3_fly_1.png" />
+    <Content Include="game\image\fish\bottom-bar.png" />
+    <Content Include="game\image\fish\bottom.png" />
+    <Content Include="game\image\fish\bullet.png" />
+    <Content Include="game\image\fish\bullet1.png" />
+    <Content Include="game\image\fish\bullet2.png" />
+    <Content Include="game\image\fish\bullet3.png" />
+    <Content Include="game\image\fish\bullet4.png" />
+    <Content Include="game\image\fish\bullet5.png" />
+    <Content Include="game\image\fish\bullet6.png" />
+    <Content Include="game\image\fish\bullet7.png" />
+    <Content Include="game\image\fish\bullet8.png" />
+    <Content Include="game\image\fish\cannon1.png" />
+    <Content Include="game\image\fish\cannon2.png" />
+    <Content Include="game\image\fish\cannon3.png" />
+    <Content Include="game\image\fish\cannon4.png" />
+    <Content Include="game\image\fish\cannon5.png" />
+    <Content Include="game\image\fish\cannon6.png" />
+    <Content Include="game\image\fish\cannon7.png" />
+    <Content Include="game\image\fish\cannon_minus.png" />
+    <Content Include="game\image\fish\cannon_minus_down.png" />
+    <Content Include="game\image\fish\cannon_plus.png" />
+    <Content Include="game\image\fish\cannon_plus_down.png" />
+    <Content Include="game\image\fish\coinAni1.png" />
+    <Content Include="game\image\fish\coinAni2.png" />
+    <Content Include="game\image\fish\coinText.png" />
+    <Content Include="game\image\fish\energy-bar.png" />
+    <Content Include="game\image\fish\fish-hd.png" />
+    <Content Include="game\image\fish\fish1.png" />
+    <Content Include="game\image\fish\fish10.png" />
+    <Content Include="game\image\fish\fish2.png" />
+    <Content Include="game\image\fish\fish3.png" />
+    <Content Include="game\image\fish\fish4.png" />
+    <Content Include="game\image\fish\fish5.png" />
+    <Content Include="game\image\fish\fish6.png" />
+    <Content Include="game\image\fish\fish7.png" />
+    <Content Include="game\image\fish\fish8.png" />
+    <Content Include="game\image\fish\fish9.png" />
+    <Content Include="game\image\fish\game_bg_2_hd.jpg" />
+    <Content Include="game\image\fish\level_back.png" />
+    <Content Include="game\image\fish\level_bar.png" />
+    <Content Include="game\image\fish\level_bg.png" />
+    <Content Include="game\image\fish\level_shuxian.png" />
+    <Content Include="game\image\fish\number_black.png" />
+    <Content Include="game\image\fish\shark-hd.png" />
+    <Content Include="game\image\fish\shark1.png" />
+    <Content Include="game\image\fish\shark2.png" />
+    <Content Include="game\image\fish\startbg.jpg" />
+    <Content Include="game\image\fish\web.png" />
+    <Content Include="game\image\fish\web1.png" />
+    <Content Include="game\image\fish\web2.png" />
+    <Content Include="game\image\中飞机挨打.png" />
+    <Content Include="game\image\中飞机爆炸.gif" />
+    <Content Include="game\image\大飞机挨打.png" />
+    <Content Include="game\image\大飞机爆炸.gif" />
+    <Content Include="game\image\小飞机爆炸.gif" />
+    <Content Include="game\image\开始背景.png" />
+    <Content Include="game\image\我的飞机.gif" />
+    <Content Include="game\image\本方飞机爆炸.gif" />
+    <Content Include="game\image\飞机爆炸.gif" />
+    <Content Include="game\js\fish\FishGroup.js" />
+    <Content Include="game\js\fish\fishjoy.js" />
+    <Content Include="game\js\fish\fishjoy2.js" />
+    <Content Include="game\js\fish\FishManager.js" />
+    <Content Include="game\js\fish\quark.base-1.0.0.alpha.min.js" />
+    <Content Include="game\js\fish\R.js" />
+    <Content Include="game\js\fish\Utils.js" />
+    <Content Include="game\js\fish\views\Bullet.js" />
+    <Content Include="game\js\fish\views\Cannon.js" />
+    <Content Include="game\js\fish\views\Fish.js" />
+    <Content Include="game\js\fish\views\Num.js" />
+    <Content Include="game\js\fish\views\Player.js" />
+    <Content Include="game\js\main.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Photo\QQ图片20150803201541.png" />
+    <Content Include="Scripts\backbone-min.js" />
+    <Content Include="Scripts\backbone.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\canvas-pointer.js" />
+    <Content Include="Scripts\cay.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\fn.js" />
+    <Content Include="Scripts\framework.plugins.js" />
+    <Content Include="Scripts\imagesloaded.min.js" />
+    <Content Include="Scripts\isotope.js" />
+    <Content Include="Scripts\jquery-1.8.3.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\download\陈安一 - 简历.doc" />
+    <None Include="Scripts\jquery-2.2.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.4.js" />
+    <Content Include="Scripts\jquery-2.2.4.min.js" />
+    <Content Include="Scripts\jquery.flexslider.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.mixitup.min.js" />
+    <Content Include="Scripts\jquery.pagepiling.js" />
+    <Content Include="Scripts\jquery.pagepiling.min.js" />
+    <Content Include="Scripts\jquery.swipebox.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery.wmuSlider.js" />
+    <Content Include="Scripts\jqueryui.js" />
+    <Content Include="Scripts\MB1\html5shiv.js" />
+    <Content Include="Scripts\MB1\init.js" />
+    <Content Include="Scripts\MB1\jquery.dropotron.js" />
+    <Content Include="Scripts\MB1\jquery.min.js" />
+    <Content Include="Scripts\MB1\skel-panels.min.js" />
+    <Content Include="Scripts\MB1\skel.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\NB-js\canvas.js" />
+    <Content Include="Scripts\NB-js\Index.js" />
+    <Content Include="Scripts\NB-js\nb-fire.js" />
+    <Content Include="Scripts\NB-js\nb-flower.js" />
+    <Content Include="Scripts\NB-js\nb-people.js" />
+    <Content Include="Scripts\NB-js\nb01.js" />
+    <Content Include="Scripts\NB-js\nb02.js" />
+    <Content Include="Scripts\NB-js\nb03.js" />
+    <Content Include="Scripts\NB-js\people-base.js" />
+    <Content Include="Scripts\NB-js\screen.js" />
+    <Content Include="Scripts\New\Index\artDialog4_jb51net\artDialog.iframe.js" />
+    <Content Include="Scripts\New\Index\artDialog4_jb51net\jquery.artDialog.js" />
+    <Content Include="Scripts\New\Index\artDialog4_jb51net\skins\default.css" />
+    <Content Include="Scripts\New\Index\artDialog4_jb51net\skins\icons\error.png" />
+    <Content Include="Scripts\New\Index\artDialog4_jb51net\skins\icons\face-sad.png" />
+    <Content Include="Scripts\New\Index\artDialog4_jb51net\skins\icons\face-smile.png" />
+    <Content Include="Scripts\New\Index\artDialog4_jb51net\skins\icons\loading.gif" />
+    <Content Include="Scripts\New\Index\artDialog4_jb51net\skins\icons\question.png" />
+    <Content Include="Scripts\New\Index\artDialog4_jb51net\skins\icons\succeed.png" />
+    <Content Include="Scripts\New\Index\artDialog4_jb51net\skins\icons\warning.png" />
+    <Content Include="Scripts\New\Index\common.js" />
+    <Content Include="Scripts\New\Index\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\New\Index\jquery.easing.1.3.js" />
+    <Content Include="Scripts\New\Index\jquery.fullPage.min.js" />
+    <Content Include="Scripts\pubuliu\hovers.js" />
+    <Content Include="Scripts\pubuliu\snap.svg-min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\smoothscroll.js" />
+    <Content Include="Scripts\sweetalert.min.js" />
+    <Content Include="Scripts\underscore-min.js" />
+    <Content Include="Scripts\underscore.js" />
+    <Content Include="Scripts\wow.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Index3.cshtml" />
+    <Content Include="Scripts\jquery-2.2.4.min.map" />
+    <None Include="Views\Home\Index3cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Admin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Content\MB1\font\fontawesome-webfont.eot" />
+    <Content Include="Content\MB1\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\MB1\font\fontawesome-webfont.woff" />
+    <Content Include="Content\MB1\font\FontAwesome.otf" />
+    <Content Include="Content\MB1\font\ODelI1aHBYDBqgeIAH2zlN0tugusXa58UbOrParLRF0.eot" />
+    <Content Include="Content\MB1\font\vCIhE2H_Y_br_NAuQOCHYQ.eot" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Content\cay.eot" />
+    <Content Include="game\image\fish\bottom.json" />
+    <Content Include="game\image\fish\bottom.plist" />
+    <Content Include="game\image\fish\bottom.tps" />
+    <Content Include="game\image\fish\bullet.json" />
+    <Content Include="game\image\fish\bullet.tps" />
+    <Content Include="game\image\fish\cannon.plist" />
+    <Content Include="game\image\fish\fish-hd.plist" />
+    <Content Include="game\image\fish\game_bg_1.plist" />
+    <Content Include="game\image\fish\game_bg_2.plist" />
+    <Content Include="game\image\fish\game_bg_3.plist" />
+    <Content Include="game\image\fish\game_bg_3_cover.plist" />
+    <Content Include="game\image\fish\game_bg_4.plist" />
+    <Content Include="game\image\fish\main_menu.plist" />
+    <Content Include="game\image\fish\shark-hd.plist" />
+    <Content Include="game\image\fish\web.json" />
+    <Content Include="game\image\fish\web.tps" />
+    <Content Include="fonts\codropsicons.eot" />
+    <Content Include="fonts\codropsicons.ttf" />
+    <Content Include="fonts\codropsicons.woff" />
+    <Content Include="Views\NB\Index.cshtml" />
+    <Content Include="Views\NB\NB01.cshtml" />
+    <Content Include="Views\NB\NB02.cshtml" />
+    <Content Include="Views\NB\NB03.cshtml" />
+    <Content Include="Views\NB\NB04.cshtml" />
+    <Content Include="Views\NB\NB05.cshtml" />
+    <None Include="Properties\PublishProfiles\aaa.pubxml" />
+    <Content Include="Views\Home\PagePiLing.cshtml" />
+    <Content Include="Views\MoBan\Index.cshtml" />
+    <Content Include="Views\MoBan\Ceshi.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Home\Index2.cshtml" />
+    <Content Include="Views\Jiazi\Index.cshtml" />
+    <Content Include="Views\Home\Wap.cshtml" />
+    <Content Include="Views\NB\airplane.cshtml" />
+    <Content Include="Views\NB\fish.cshtml" />
+    <Content Include="Scripts\Chenanyi.log.js" />
+    <Content Include="Views\About\Detail.cshtml" />
+    <Content Include="Views\Home\newWap.cshtml" />
+    <Content Include="Views\Photo\index.cshtml" />
+    <Content Include="Views\Photo\Upload.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60180</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60154/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

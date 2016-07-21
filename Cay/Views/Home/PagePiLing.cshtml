@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery.pagepiling.css" />
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    <script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.pagepiling.js"></script>
+    <title>123</title>
+</head>
+<body>
+        <div id="pagepiling">
+            <div class="section" style="background-color:#5c2929">
+                <div class="whole">
+                    <img src="~/Content/images/back.jpg" />
+                    <div class="mask"></div>
+                </div>
+                <div class="b">
+                    <p>
+                        你家包子减肥去了！！！！
+                    </p>
+                </div>
+            </div>
+            <div class="section" style="background-color:#333366"></div>
+            <div class="section" style="background-color:#666666"></div>
+            <div class="section" style="background-color:#99CC99"></div>
+        </div>
+    <script>
+        $(document).ready(function () {
+            $('#pagepiling').pagepiling();
+        });
+    </script>
+</body>
+</html>

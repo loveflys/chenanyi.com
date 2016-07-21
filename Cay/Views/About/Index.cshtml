@@ -1,0 +1,314 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "丰满的包子铺";
+}
+
+<link href='~/Content/base.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/Content/animate.min.css">
+<link rel="stylesheet" href="/Content/bootstrap.min.css">
+<link rel="stylesheet" href="/Content/font-awesome.min.css">
+<link rel="stylesheet" href="/Content/templatemo-style.css">
+<link rel="stylesheet" href="~/Content/Chenanyi.log.css" />
+<script src="~/Scripts/Chenanyi.log.js"></script>
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+    <nav class="navbar navbar-fixed-top custom-navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">丰满的包子</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home" class="smoothScroll">首页</a></li>
+                    <li><a href="#Person" class="smoothScroll">介绍</a></li>
+                    <li><a href="#Exp" class="smoothScroll">项目经验</a></li>
+                    <li><a href="#Skill" class="smoothScroll">技能点</a></li>
+                    <li><a href="/air" class="smoothScroll">飞机大战</a></li>
+                    <li><a href="/fish" class="smoothScroll">捕鱼达人</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- start 页头 -->
+    <section id="home">
+        <div class="overlay">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li style="display:block">
+                        <img src="/Content/images/slider/1.jpg" alt="Slide 1">
+                        <div class="slider-caption">
+                            <div class="templatemo_homewrapper">
+                                <h3 class="wow bounceIn">把我带回家</h3>
+                                <h1 class="wow bounce">既能么么哒</h1>
+                                <h2>
+                                    <span class="wow fadeIn" data-wow-delay="0.9s">还能piapiapia</span>
+                                </h2>
+                                <a href="#Person" class="smoothScroll templatemo-slider-btn btn btn-default">继续看看</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- end 页头 -->
+    <!-- start 介绍 -->
+    <section id="Person">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 wow bounceIn" style="margin-top: 50px">
+                    <h2>介绍</h2>
+                    <hr>
+                    <h4>姓名:陈安一 外号：包子 梦想：正在想</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 wow fadeInLeft templatemo-about-left" data-wow-delay="0.3s">
+                    <h3 class="about-title">个人简介</h3>
+                    <p>1992.11在山东临沂下凡，2015.7 毕业于长春大学 软件工程专业</p>
+                    <p>2014.10月于北京恩源实习。负责pc端wap端的页面开发，后台逻辑编写。 2、mongoDB到Hbase的数据迁移，优化迁移速度等。3、编写tooltip小插件。</p>
+                </div>
+                <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.3s">
+                    <span class="text-uppercase">C# & ASP.NET MVC5 100%</span>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                    </div>
+                    <span class="text-uppercase">Java & HTML5 & js 90%</span>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                    </div>
+                    <span class="text-uppercase">Linux & HBase & MongoDB & RabbitMQ & Solr & Redis 65%</span>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="about-wrapper">
+                        <img src="/Content/images/cay1.jpg" class="img-responsive" alt="about img">
+                        <h3></h3>
+                        <h5></h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="about-wrapper">
+                        <img src="/Content/images/cay2.jpg" class="img-responsive" alt="about img">
+                        <h3></h3>
+                        <h5></h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="about-wrapper">
+                        <img src="/Content/images/cay3.jpg" class="img-responsive" alt="about img">
+                        <h3></h3>
+                        <h5></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end 介绍 -->
+    <div id="jianli" class="divider">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="divider-des">
+                        <h3 class="text-uppercase">想要简历么</h3>
+                        <p></p>
+                        <button class="btn btn-default text-uppercase" onclick="location.href='/Content/download/陈安一 - 简历.doc'">下载</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- start 项目经验 -->
+    <section id="Exp" style="height:610px">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center wow bounceIn" style="margin-top:50px;height:250px">
+                    <h2>项目经验</h2>
+                    <hr>
+                    <h4>重头戏！</h4>
+                    <a href="/about/detail" class="btn btn-default text-uppercase" style="margin-top: -20px;color:#DD7C7C;">详细</a>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="media">
+                        <div class="media-object media-left wow fadeIn" data-wow-delay="0.6s">
+                            <i class="fa fa-laptop"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">前台</h3>
+                            <p>负责PC端页面的开发以及后台逻辑编写，解决js冲突，样式错误以及跨域等问题</p><br />
+                            <p>独立编写提示框插件等js插件方便团队使用。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="media">
+                        <div class="media-object media-left wow fadeIn" data-wow-delay="0.6s">
+                            <i class="fa fa-android"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">手机端</h3>
+                            <p>开发2015百城万家电商创业孵化赛报名系统<a href="http://wap.yuan.cn/sign">链接在此</a><a href="http://x.eqxiu.com/s/fqQpQMlw?eqrcode=1&from=timeline&isappinstalled=0">介绍</a></p><br />
+                            <p>负责手机端html5页面的开发，根据美工大哥给出的页面进行开发、测试。对页面进行优化。例如对图片进行延迟加载处理等，尽量提升手机用户的用户体验</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="media">
+                        <div class="media-object media-left wow fadeIn" data-wow-delay="0.6s">
+                            <i class="fa fa-paper-plane"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">后台</h3>
+                            <p>编写WCF服务并放于服务器中运行，定时检查数据库和索引中的数据以完成数据的同步。</p><br />
+                            <p>完成与某飞机订票网站的接口对接。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="media">
+                        <div class="media-object media-left wow fadeIn" data-wow-delay="0.6s">
+                            <i class="fa fa-html5"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">数据库</h3>
+                            <p>编写Java程序完成从MongoDB到HBase的数据迁移</p><br />
+                            <p>并对优化速度、数据存储和取出速度进行优化，完成存取速度的较大提升。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end 项目经验 -->
+    <!-- start 技能点 -->
+    <section id="Skill" style="margin-top:300px">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="wow bounceIn">
+                        <h2 class="wow bounceIn">技能点</h2>
+                        <hr>
+                        <h4></h4>
+                    </div>
+                    <div class="iso-section wow fadeIn" data-wow-delay="0.6s">
+
+                        <ul class="filter-wrapper clearfix">
+                            <li><a href="#" data-filter="*" class="selected opc-main-bg">Study</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".graphic">ASP.NET MVC5</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".photoshop">javascript</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".wallpaper">jquery</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".wallpaper">html5</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".wallpaper">bootstrap</a></li>
+                            <br />
+                            <li><a href="#" class="opc-main-bg" data-filter=".wallpaper">Java</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".wallpaper">MongoDB</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".wallpaper">HBase</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".wallpaper">Solr</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".wallpaper">C#</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".wallpaper">Linux</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".wallpaper">RabbitMQ</a></li>
+                        </ul>
+
+                        <div class="iso-box-section">
+                            <div class="iso-box-wrapper col4-iso-box">
+
+                                <div class="iso-box graphic photoshop wallpaper col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-thumb">
+                                        <img src="/Content/images/IMG1.jpg" class="fluid-img" alt="portfolio img">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-description">
+                                                <a href="#" class="fa fa-search"></a>
+                                                <a href="#" class="fa fa-link"></a>
+                                                <h4></h4>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="iso-box graphic wallpaper col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-thumb">
+                                        <img src="/Content/images/IMG2.jpg" class="fluid-img" alt="portfolio img">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-description">
+                                                <a href="#" class="fa fa-search"></a>
+                                                <a href="#" class="fa fa-link"></a>
+                                                <h4></h4>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="iso-box graphic col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-thumb">
+                                        <img src="/Content/images/IMG4.jpg" class="fluid-img" alt="portfolio img">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-description">
+                                                <a href="#" class="fa fa-search"></a>
+                                                <a href="#" class="fa fa-link"></a>
+                                                <h4></h4>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="iso-box wallpaper col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-thumb">
+                                        <img src="/Content/images/IMG3.jpg" class="fluid-img" alt="portfolio img">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-description">
+                                                <a href="#" class="fa fa-search"></a>
+                                                <a href="#" class="fa fa-link"></a>
+                                                <h4></h4>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="iso-box graphic photoshop col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-thumb">
+                                        <img src="/Content/images/IMG5.jpg" class="fluid-img" alt="portfolio img">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-description">
+                                                <a href="#" class="fa fa-search"></a>
+                                                <a href="#" class="fa fa-link"></a>
+                                                <h4></h4>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end 既能点 -->
+    <!-- start 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="wow bounceIn">Copyright &copy; <span>Cay</span> 2016 </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end 页脚 -->
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery.flexslider.js"></script>
+    <script src="/Scripts/isotope.js"></script>
+    <script src="/Scripts/imagesloaded.min.js"></script>
+    <script src="/Scripts/smoothscroll.js"></script>
+    <script src="/Scripts/wow.min.js"></script>
+</body>

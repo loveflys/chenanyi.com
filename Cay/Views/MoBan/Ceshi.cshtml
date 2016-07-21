@@ -1,0 +1,86 @@
+﻿@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>哈哈哈</title>
+    <link href="~/Content/Chenanyi.log.css?v=1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/Content/pubuliu/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/pubuliu/demo.css" />
+    <!--必要样式-->
+    <link rel="stylesheet" type="text/css" href="~/Content/pubuliu/component.css" />
+</head>
+<body>
+    <div class="container">
+
+        <header class="codrops-header">
+            <h1><span>大包子的幸福生活</span></h1>
+            <nav class="codrops-demos">
+                <a href="javascript:history.go(-1)">回上一页</a>
+            </nav>
+        </header>
+
+        <section id="grid" class="grid clearfix">
+            <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                <figure>
+                    <img src="~/Content/images/img.png" />
+                    <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z" /></svg>
+                    <figcaption>
+                        <h2>胡巴！</h2>
+                    </figcaption>
+                </figure>
+            </a>
+            <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                <figure>
+                    <img src="~/Content/images/cay4.png" />
+                    <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z" /></svg>
+                    <figcaption>
+                        <h2>包子</h2>
+                    </figcaption>
+                </figure>
+            </a>
+        </section>
+
+    </div><!-- /container -->
+    <script src="~/Scripts/Chenanyi.log.js"></script>
+    <script src="~/Scripts/pubuliu/snap.svg-min.js"></script>
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        (function () {
+
+            function init() {
+                var speed = 330,
+                    easing = mina.backout;
+
+                [].slice.call(document.querySelectorAll('#grid > a')).forEach(function (el) {
+                    var s = Snap(el.querySelector('svg')), path = s.select('path'),
+                        pathConfig = {
+                            from: path.attr('d'),
+                            to: el.getAttribute('data-path-hover')
+                        };
+
+                    el.addEventListener('mouseenter', function () {
+                        path.animate({ 'path': pathConfig.to }, speed, easing);
+                    });
+
+                    el.addEventListener('mouseleave', function () {
+                        path.animate({ 'path': pathConfig.from }, speed, easing);
+                    });
+                });
+            }
+
+            init();
+
+        })();
+    </script>
+
+</body>
+</html>
+
