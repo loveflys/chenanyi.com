@@ -8,7 +8,7 @@ namespace Cay.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string id)
         {
             //Helper.DBHelper.DeletePhoto("1001");
             //Helper.DBHelper.UpdateTable("MyPhoto", "ADD", "time CHAR(200)");
@@ -23,9 +23,13 @@ namespace Cay.Controllers
             //Helper.DBHelper.InsertPhoto(1009, "懒包子必备！", "NEW1.JPG", "life");
             //Helper.DBHelper.InsertPhoto(1010, "小智！", "NEW2.JPG", "life");
             //Helper.DBHelper.InsertPhoto(1011, "羞涩", "NEW3.JPG", "life");
-            bool mobileB = Request.Browser.IsMobileDevice;
-            if (mobileB) {
-                return View("newWap");
+            if (id != "ok")
+            {
+                bool mobileB = Request.Browser.IsMobileDevice;
+                if (mobileB)
+                {
+                    return View("newWap");
+                }
             }
             return View();
         }
